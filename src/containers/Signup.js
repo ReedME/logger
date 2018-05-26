@@ -5,7 +5,7 @@ import {
   FormControl,
   ControlLabel
 } from "react-bootstrap";
-import { Auth } from "aws-amplify-react";
+import { Auth } from "aws-amplify";
 import LoaderButton from "../components/LoaderButton";
 import "./Signup.css";
 
@@ -28,9 +28,9 @@ export default class Signup extends Component {
 
   validateForm() {
     return (
-        this.state.username.length > 0 &&
-        this.state.givenName.length > 0 &&
-        this.state.familyName.length > 0 &&
+      this.state.username.length > 0 &&
+      this.state.givenName.length > 0 &&
+      this.state.familyName.length > 0 &&
       this.state.email.length > 0 &&
       this.state.password.length > 0 &&
       this.state.password === this.state.confirmPassword

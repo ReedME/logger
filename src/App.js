@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { Auth } from "aws-amplify-react";
+import { Auth } from "aws-amplify";
 import { Link, withRouter } from "react-router-dom";
 import { Navbar, Nav, NavItem } from "react-bootstrap";
 import Routes from "./Routes";

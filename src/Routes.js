@@ -5,6 +5,7 @@ import Home from "./containers/Home";
 import Login from "./containers/Login";
 import NotFound from "./containers/NotFound";
 import Signup from "./containers/Signup";
+import NewDocket from "./containers/NewDocket";
 
 
 export default ({ childProps }) =>
@@ -12,6 +13,7 @@ export default ({ childProps }) =>
         <AppliedRoute path="/" exact component={Home} props={childProps} />
         <AppliedRoute path="/login" exact component={Login} props={childProps} />
         <AppliedRoute path="/signup" exact component={Signup} props={childProps} />
+        <AppliedRoute path="/dockets/new" exact component={NewDocket} props={childProps} />
         { /* Finally, catch all unmatched routes */ }
         <Route component={NotFound} />
     </Switch>;
