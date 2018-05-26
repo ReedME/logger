@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import Amplify from "aws-amplify";
-import config from "./config";
+import config from "./config/config";
 import "./index.css";
 
 Amplify.configure({
