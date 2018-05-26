@@ -9,16 +9,16 @@ import "./App.css";
 class App extends Component {
   constructor(props) {
     super(props);
-  
+
     this.state = {
       isAuthenticated: false,
       isAuthenticating: true
     };
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     try {
-      if ( Auth.currentSession()) {
+      if (await Auth.currentSession()) {
         this.userHasAuthenticated(true);
       }
     }
@@ -27,19 +27,22 @@ class App extends Component {
         alert(e);
       }
     }
-  
+
     this.setState({ isAuthenticating: false });
   }
-  
+
   userHasAuthenticated = authenticated => {
     this.setState({ isAuthenticated: authenticated });
   }
 
   handleLogout = async event => {
     await Auth.signOut();
+
     this.userHasAuthenticated(false);
+
     this.props.history.push("/login");
   }
+
 
   render() {
     
