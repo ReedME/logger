@@ -6,14 +6,18 @@ import Login from "./containers/Login";
 import NotFound from "./containers/NotFound";
 import Signup from "./containers/Signup";
 import NewDocket from "./containers/NewDocket";
+import Dockets from "./containers/Dockets";
+import AuthenticatedRoute from "./components/AuthenticatedRoute";
+import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
 
 
 export default ({ childProps }) =>
     <Switch>
         <AppliedRoute path="/" exact component={Home} props={childProps} />
-        <AppliedRoute path="/login" exact component={Login} props={childProps} />
-        <AppliedRoute path="/signup" exact component={Signup} props={childProps} />
-        <AppliedRoute path="/dockets/new" exact component={NewDocket} props={childProps} />
+        <UnauthenticatedRoute path="/login" exact component={Login} props={childProps} />
+        <UnauthenticatedRoute path="/signup" exact component={Signup} props={childProps} />
+        <AuthenticatedRoute path="/dockets/new" exact component={NewDocket} props={childProps} />
+        <AuthenticatedRoute path="/dockets/:id" exact component={Dockets} props={childProps} />
         { /* Finally, catch all unmatched routes */ }
         <Route component={NotFound} />
     </Switch>;

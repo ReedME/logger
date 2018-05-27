@@ -4,10 +4,22 @@
   }
   
   .Home .lander h1 {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", roboto;
     font-weight: 600;
   }
   
   .Home .lander p {
     color: #999;
+  }
+
+  .Home .dockets h4 {
+    font-family: "Roboto", roboto;
+    font-weight: 600;
+    overflow: hidden;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .Home .dockets p {
+    color: #666;
   }
