@@ -189,6 +189,9 @@ handleTipRadioChange = event => {
        
       <FormGroup controlId="rego">
        <ControlLabel> Truck Registration # </ControlLabel>
+       <Label bsStyle="info" className="pull-right">
+       Requires full 6 digits
+       </Label>
        <FormControl
         onChange={this.handleChange}
         value={this.state.rego}
