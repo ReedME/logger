@@ -40,7 +40,7 @@ export default class Home extends Component {
                         key={docket.docketId}
                         href={`/dockets/${docket.docketId}`}
                         onClick={this.handleDocketClick}
-                        header={docket.content.trim().split("\n")[0]}
+                        header={docket.docketIdNum.trim().split("\n")[0]}
                     >
                         {"Created: " + new Date(docket.createdAt).toLocaleString()}
                     </ListGroupItem>

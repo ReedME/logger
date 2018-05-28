@@ -16,7 +16,7 @@ export default class Dockets extends Component {
             isLoading: null,
             isDeleting: null,
             docket: null,
-            content: "",
+            docketIdNum: "",
             attachmentURL: null
         };
     }
@@ -25,7 +25,7 @@ export default class Dockets extends Component {
         try {
             let attachmentURL;
             const docket = await this.getDocket();
-            const { content, attachment } = docket;
+            const { docketIdNum, attachment } = docket;
 
             if (attachment) {
                 attachmentURL = await Storage.get(attachment);
@@ -33,7 +33,7 @@ export default class Dockets extends Component {
 
             this.setState({
                 docket,
-                content,
+                docketIdNum,
                 attachmentURL
             });
         } catch (e) {
@@ -46,7 +46,7 @@ export default class Dockets extends Component {
     }
 
     validateForm() {
-        return this.state.content.length > 0;
+        return this.state.docketIdNum.length > 0;
     }
       
     formatFilename(str) {
@@ -87,7 +87,7 @@ export default class Dockets extends Component {
               }
       
               await this.saveDocket({
-                  content: this.state.content,
+                  docketIdNum: this.state.docketIdNum,
                   attachment: attachment || this.state.docket.attachment
               });
               this.props.history.push("/");
@@ -132,10 +132,10 @@ export default class Dockets extends Component {
               <div className="dockets">
                   {this.state.docket &&
               <form onSubmit={this.handleSubmit}>
-                  <FormGroup controlId="content">
+                  <FormGroup controlId="docketIdNum">
                       <FormControl
                           onChange={this.handleChange}
-                          value={this.state.content}
+                          value={this.state.docketIdNum}
                           componentClass="textarea"
                       />
                   </FormGroup>

@@ -6,3 +6,20 @@
     height: 300px;
     font-size: 24px;
   }
+
+  .FileUpload {
+    text-align: right;  }
+
+    .react-datepicker {
+      font-family: "Roboto", Roboto, Arial, sans-serif;
+      font-size: 1.2rem;
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #aeaeae;
+      border-radius: 0.3rem;
+      display: inline-block;
+      position: relative;
+    }
+    .react-datepicker__time-list {
+      padding: 7px;
+    }
