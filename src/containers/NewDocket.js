@@ -98,7 +98,7 @@ export default class NewDocket extends Component {
   }
   
   createDocket(docket) {
-      console.log(this.state.workHours);
+      
       return API.post("dockets", "/dockets", {
           body: docket
       });
