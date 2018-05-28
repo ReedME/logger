@@ -1,8 +1,12 @@
-.NewDocket form {
+.returnMargin {
+  margin-top: -10px;
+}
+.NewDocket Form {
     padding-bottom: 15px;
+    margin: 10px;
   }
   
-  .NewDocket form textarea {
+  .NewDocket Form textarea {
     height: 300px;
     font-size: 24px;
   }
@@ -23,3 +27,14 @@
     .react-datepicker__time-list {
       padding: 7px;
     }
+
+    .labelright {
+      align-content: flex-end;
+    }
+    .button-padding {
+      margin-bottom: 10px;
+    }
+
+    
+      
+    
