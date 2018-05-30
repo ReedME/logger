@@ -1,14 +1,20 @@
 .returnMargin {
-  margin-top: -10px;
+  margin-top: -15px;
+}
+.formWrap{
+  padding-left:15px;
+    padding-right:15px;
 }
 .NewDocket Form {
     padding-bottom: 15px;
+    padding-left:15px;
+    padding-right:15px;
     margin: 10px;
   }
   
   .NewDocket Form textarea {
-    height: 300px;
-    font-size: 24px;
+    height: 200px;
+    font-size: 16px;
   }
 
   .FileUpload {
@@ -16,7 +22,7 @@
 
     .react-datepicker {
       font-family: "Roboto", Roboto, Arial, sans-serif;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       background-color: #fff;
       color: #000;
       border: 1px solid #aeaeae;
@@ -28,12 +34,22 @@
       padding: 7px;
     }
 
-    .labelright {
-      align-content: flex-end;
-    }
-    .button-padding {
-      margin-bottom: 10px;
-    }
+  .no-padding {
+    padding: 0px;    
+  }
+.uppercase {
+  text-transform: uppercase;
+}    
+
+.boxFix {
+  padding-left: 13px;
+  padding-right: 13px;
+  width: 55%;
+  
+}
+.labelBump {
+  padding-right:5px;
+}
 
     
       
